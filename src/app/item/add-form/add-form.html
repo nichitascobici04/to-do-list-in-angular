@@ -1,0 +1,15 @@
+<form class="row mt-3 gx-3 gy-2 align-items-center justify-content-center">
+    <div class="col-sm-6">
+        <label class="visually-hidden">Item</label>
+        <input type="text" 
+               class="form-control" 
+               [(ngModel)]="newTitle"
+               name="newTitle">
+    </div>
+    <div class="col-auto">
+        <button type="submit" 
+        class="btn btn-primary"
+        (click)="$event.preventDefault(); addItem()"
+        >Add</button>
+    </div>
+</form>

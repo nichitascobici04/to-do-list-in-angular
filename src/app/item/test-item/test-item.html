@@ -1,0 +1,15 @@
+<li class="d-flex justify-content-between">
+    <div class="form-check">
+        <label class="form-check-label" [ngClass]="cssTitle">
+            <!-- <input class="checkbox"  -->
+                <input
+                type="checkbox"
+                [checked]="item.isComplete"
+                (click)="sayMyName()">
+                {{ item.title }}
+        </label>
+    </div>
+    <div>
+        <button type="button" class="btn btn-close" (click)="removeItem()">Remove</button>
+    </div>
+</li>

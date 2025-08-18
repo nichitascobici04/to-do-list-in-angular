@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="d-flex">
+        <add-form
+            (addTheItem)="items.push($event)"
+        ></add-form>
+        <button 
+            class="btn btn-primary"
+            [routerLink]="['/contact-component']"
+        >Contact</button>
+    </div>
+    <div class="row mt-3">
+        <item-filter
+            [(filter)]="filter"
+        ></item-filter>
+    </div>
+    <div class="col-4-sm">
+        <item-list
+            [items]="items.filter(filter)"
+        ></item-list>
+    </div>
+</div>

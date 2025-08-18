@@ -1,0 +1,23 @@
+<div class="row mt-3">
+    @if (items.length == 0) {
+        <div>The list is empty.</div>
+    }
+    @else {
+        <ul class="test-list">
+            @for (item of items; track items) {
+                <test-item [item]="item"></test-item>
+            }
+        </ul>
+    }
+    <!-- <div *ngIf="items.length == 0; else showItems">
+        The list is empty.
+    </div>
+    <ng-template #showItems>
+        <ul class="test-list">
+            <test-item
+                *ngFor="let item of items"
+                [item]="item"
+            ></test-item>
+        </ul>
+    </ng-template> -->
+</div>

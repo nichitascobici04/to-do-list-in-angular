@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [
+    RouterModule,
+    RouterOutlet
+  ],
+  templateUrl: './test.html',
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected title = 'ang-test';
+export class App implements OnInit {
+  constructor() {}
+  ngOnInit(): void {
+  }
 }
